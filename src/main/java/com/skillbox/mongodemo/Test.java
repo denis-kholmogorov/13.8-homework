@@ -16,6 +16,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -37,7 +38,7 @@ public class Test {
             docs.add(new Document()
                     .append("Name", line[0])
                     .append("Age", Integer.valueOf(line[1]))
-                    .append("Courses", line[2])
+                    .append("Courses", Arrays.asList(line[2].split(",")))
             );
         }
 
@@ -71,6 +72,11 @@ public class Test {
     }
 
 
+    private static List<String> getList(String courses){
+        List<String> list = new ArrayList<>();
+
+        return null;
+    }
     private static List<String[]> getLines(File fileCsv){
         File file = fileCsv;
 
