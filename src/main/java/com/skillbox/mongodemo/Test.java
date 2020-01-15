@@ -72,11 +72,7 @@ public class Test {
     }
 
 
-    private static List<String> getList(String courses){
-        List<String> list = new ArrayList<>();
 
-        return null;
-    }
     private static List<String[]> getLines(File fileCsv){
         File file = fileCsv;
 
